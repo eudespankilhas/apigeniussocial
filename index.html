@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API GENIUS SOCIAL IA</title>
+  <style>
+    :root { color-scheme: dark light; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin:0; padding:32px; background:#0f1120; color:#eef; }
+    .card { max-width:900px; margin:0 auto; background:#151735; border:1px solid #6d28d955; border-radius:12px; padding:24px; }
+    a { color:#a78bfa; }
+    code { background:#0b0d1c; padding:2px 6px; border-radius:6px; }
+    h1 { margin-top:0; }
+    ul { line-height:1.9; }
+    .note { font-size:14px; opacity:.85 }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>API GENIUS SOCIAL IA</h1>
+    <p>Bem-vindo! Esta é uma API baseada em Serverless Functions na Vercel, com integração Stripe.</p>
+
+    <h2>Endpoints</h2>
+    <ul>
+      <li><a href="/api/checkout" target="_blank">POST /api/checkout</a> <span class="note">– cria uma Checkout Session</span></li>
+      <li><a href="/api/create-payment-intent" target="_blank">POST /api/create-payment-intent</a> <span class="note">– cria um Payment Intent</span></li>
+      <li><a href="/api/stripe-webhook" target="_blank">POST /api/stripe-webhook</a> <span class="note">– webhook do Stripe (corpo bruto)</span></li>
+      <li><a href="/api/confirm-subscription" target="_blank">POST /api/confirm-subscription</a> <span class="note">– confirmar assinatura (exemplo)</span></li>
+    </ul>
+
+    <h2>Como testar</h2>
+    <ol>
+      <li>Configure variáveis na Vercel: <code>STRIPE_SECRET_KEY</code>, <code>APP_URL</code>, e depois crie o webhook e defina <code>STRIPE_WEBHOOK_SECRET</code>.</li>
+      <li>Faça um POST para <code>/api/checkout</code> com <code>priceId</code> ou <code>amount</code>.</li>
+      <li>Finalize o pagamento e verifique eventos no painel da Stripe (Payments/Events).</li>
+    </ol>
+
+    <p class="note">Dica: use <code>Invoke-RestMethod</code> (PowerShell) ou <code>curl</code> para testar.</p>
+  </div>
+</body>
+</html>
