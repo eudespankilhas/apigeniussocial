@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/create-payment-intent",
+      "methods": ["POST"],
+      "dest": "/functions/create-payment-intent/index.ts"
+    },
+    {
+      "src": "/api/checkout",
+      "methods": ["POST"],
+      "dest": "/functions/checkout/index.ts"
+    },
+    {
+      "src": "/api/stripe-webhook",
+      "methods": ["POST"],
+      "dest": "/functions/stripe-webhook/index.ts"
+    },
+    {
+      "src": "/api/confirm-subscription",
+      "methods": ["POST"],
+      "dest": "/functions/confirm-subscription/index.ts"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+.vercel/
+
+# Builds and caches
+.next/
+dist/
+build/
+.cache/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SQLite databases
+*.sqlite
+*.sqlite-journal
+/data/*.db
+/data/*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Misc
+*.local
+
+.vercel

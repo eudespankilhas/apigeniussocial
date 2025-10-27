@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@lib/*": ["src/lib/*"],
+      "@services/*": ["src/services/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@types/*": ["src/types/*"]
+    }
+  },
+  "include": ["src/**/*", "functions/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
