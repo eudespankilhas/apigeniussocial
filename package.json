@@ -4,12 +4,10 @@
   "description": "API serverless de monetização utilizando Node.js, Supabase e Stripe.",
   "main": "index.js",
   "scripts": {
-    "start": "node functions/create-payment-intent/index.js",
-    "start:api": "node server.cjs",
+    "dev": "node -e \"console.log('noop dev script to avoid vercel recursion')\"",
     "deploy": "sh scripts/deploy.sh"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.0.0",
     "axios": "^1.7.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
