@@ -1,0 +1,18 @@
+// ...existing code...
+export default function Home() {
+  return (
+    <main style={{ fontFamily: 'Arial, sans-serif', padding: 24 }}>
+      <h1>API Monetização Genius Social</h1>
+      <p>Endpoints disponíveis:</p>
+      <ul>
+        <li><a href="/api/health">/api/health</a></li>
+        <li>POST /api/checkout</li>
+        <li>POST /api/create-payment-intent</li>
+        <li>POST /api/confirm-subscription</li>
+        <li>POST /api/stripe-webhook (webhook)</li>
+      </ul>
+      <p>Rodar local: <code>npm run dev</code> e testar <code>/api/health</code>.</p>
+    </main>
+  );
+}
+// ...existing code...
