@@ -1,29 +1,26 @@
 {
-  "name": "api-monetizacao-genius-social",
-  "version": "1.0.0",
-  "private": true,
+  "name": "nexuspay",
+  "version": "0.0.0",
   "type": "module",
-  "engines": {
-    "node": ">=18"
-  },
+  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "supabase:init": "node scripts/init-supabase-tables.js",
+    "supabase:test": "node scripts/test-supabase-connection.js"
   },
   "dependencies": {
-    "next": "13.4.8",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "@supabase/supabase-js": "^2.76.1",
-    "stripe": "^11.0.0",
-    "dotenv": "^16.0.0",
-    "micro": "^9.3.4"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@supabase/supabase-js": "^2.0.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.5"
   }
 }

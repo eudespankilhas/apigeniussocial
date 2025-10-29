@@ -1,74 +1,68 @@
-# API de Monetização Genius Social – BASE44
+# NexusPay IA Dashboard
 
-Este projeto é uma API serverless de monetização que utiliza Node.js, Supabase e Stripe. O objetivo é fornecer funcionalidades para gerenciar pagamentos e assinaturas de usuários de forma eficiente e segura.
+Bem-vindo ao NexusPay IA, uma plataforma global de pagamentos completa e totalmente funcional, construída com as mais modernas tecnologias de frontend e inteligência artificial.
 
-## Estrutura do Projeto
+**Repositório Oficial:** [https://github.com/audiopank/nexuspay-ia](https://github.com/audiopank/nexuspay-ia)
 
-A estrutura do projeto é organizada da seguinte forma:
+---
 
-```
-api-monetizacao-genius-social
-├── functions
-│   ├── create-payment-intent
-│   │   └── index.ts          # Função para criar uma intenção de pagamento com Stripe
-│   ├── stripe-webhook
-│   │   └── index.ts          # Webhook do Stripe para processar eventos de pagamento
-│   └── confirm-subscription
-│       └── index.ts          # Lógica para confirmar assinaturas de usuários
-├── src
-│   ├── lib
-│   │   ├── supabaseClient.ts  # Cliente Supabase para interagir com o banco de dados
-│   │   └── stripeClient.ts     # Cliente Stripe para interagir com a API do Stripe
-│   ├── services
-│   │   ├── payments.ts         # Funções relacionadas a pagamentos
-│   │   └── subscriptions.ts     # Funções relacionadas a assinaturas
-│   ├── controllers
-│   │   └── index.ts            # Controladores para as rotas da API
-│   ├── middlewares
-│   │   └── auth.ts             # Middleware para autenticação de usuários
-│   └── types
-│       └── index.d.ts          # Tipos TypeScript utilizados no projeto
-├── supabase
-│   ├── migrations
-│   │   └── README.md           # Instruções sobre como executar migrações no Supabase
-│   └── functions
-│       └── README.md           # Informações sobre as funções do Supabase
-├── scripts
-│   └── deploy.sh               # Script para automatizar o processo de deploy
-├── .env.example                 # Exemplo de variáveis de ambiente
-├── .gitignore                   # Arquivos e pastas a serem ignorados pelo Git
-├── package.json                 # Configuração do npm
-├── tsconfig.json               # Configuração do TypeScript
-├── vercel.json                 # Configurações para o deploy na Vercel
-└── README.md                   # Documentação do projeto
-```
+## ✨ Funcionalidades Principais
 
-## Instalação
+*   **Dashboard Interativo:** Visualização em tempo real de métricas de vendas, transações e receita recorrente, com personalização de widgets.
+*   **Análise de Risco com IA:** Transações são analisadas automaticamente pelo Gemini para identificar e justificar níveis de risco.
+*   **Agentes de IA Proativos:**
+    *   **Agente de Onboarding:** Guia novos usuários na configuração inicial da conta.
+    *   **Agente NexusPay:** Um assistente para executar ações como criar produtos, gerar links de pagamento e consultar dados.
+    *   **Agente de Integrações:** Ajuda a conectar e gerenciar integrações com outras plataformas.
+*   **Geração de Conteúdo com IA:** Crie descrições e imagens de produtos de alta qualidade usando o Gemini e o Imagen.
+*   **Gerenciamento Completo:** Módulos dedicados para Transações, Produtos, Assinaturas, Afiliados, Links de Pagamento, Webhooks e mais.
+*   **Portal do Afiliado:** Uma área exclusiva para afiliados acompanharem seu desempenho, gerarem links e acessarem materiais de marketing.
+*   **Busca Global Inteligente:** Pesquise em todo o painel com histórico e sugestões.
+*   **Design Moderno e Responsivo:** Interface dark-mode construída com Tailwind CSS, otimizada para todos os dispositivos.
+*   **Alta Performance:** Virtualização de listas longas (transações e afiliados) para uma experiência de usuário fluida.
+*   **Segurança Reforçada:**
+    *   **Autenticação de Dois Fatores (2FA) Obrigatória:** Camada extra de segurança para todas as contas.
+    *   **Log de Auditoria Completo:** Rastreamento detalhado de todas as ações importantes realizadas na conta.
+    *   **Gerenciamento de Dados (LGPD):** Ferramentas para exportar dados e garantir conformidade.
+*   **Mobile-First com PWA:**
+    *   **Progressive Web App:** Instale o NexusPay em seu desktop ou celular para uma experiência nativa.
+    *   **Funcionalidade Offline:** Acesso à plataforma mesmo sem conexão à internet.
+    *   **Notificações Push:** Receba alertas importantes diretamente no seu dispositivo.
+*   **Escalabilidade e API:**
+    *   **API Pública e Webhooks:** Integração robusta com sistemas externos.
+    *   **SDKs para Desenvolvedores:** Bibliotecas para facilitar a integração.
 
-1. Clone o repositório:
-   ```
-   git clone <URL_DO_REPOSITORIO>
-   cd api-monetizacao-genius-social
-   ```
+## 🚀 Como Executar
 
-2. Instale as dependências:
-   ```
-   npm install
-   ```
+Para rodar este projeto localmente, siga os passos abaixo:
 
-3. Configure as variáveis de ambiente:
-   - Renomeie `.env.example` para `.env` e preencha com suas credenciais do Supabase e Stripe.
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/audiopank/nexuspay-ia.git
+    cd nexuspay-ia
+    ```
 
-## Uso
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-- Para criar uma intenção de pagamento, utilize a função em `functions/create-payment-intent/index.ts`.
-- O webhook do Stripe em `functions/stripe-webhook/index.ts` deve ser configurado no painel do Stripe para receber eventos de pagamento.
-- Para confirmar assinaturas, utilize a função em `functions/confirm-subscription/index.ts`.
+3.  **Configure sua API Key:**
+    Crie um arquivo `.env.local` na raiz do projeto e adicione sua chave da API do Google Gemini. No contexto do AI Studio, esta variável já é injetada, mas para rodar localmente, você precisará configurá-la.
 
-## Contribuição
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+    Abra [http://localhost:5173](http://localhost:5173) no seu navegador para ver o projeto.
 
-## Licença
+## 🛠️ Tecnologias Utilizadas
 
-Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
+*   **Framework:** React 18
+*   **Build Tool:** Vite
+*   **Linguagem:** TypeScript
+*   **Estilização:** Tailwind CSS
+*   **Inteligência Artificial:** Google Gemini API (gemini-2.5-flash, gemini-2.5-pro, imagen-4.0)
+*   **Tabelas e Virtualização:** TanStack Table & TanStack Virtual
+*   **Ícones:** Lucide React
