@@ -15,21 +15,3 @@ export default defineConfig({
     sourcemap: false,
   }
 })
-```
-
-## Solução 4: Verificar estrutura de pastas
-
-Certifique-se de que sua estrutura está assim:
-```
-projeto/
-├── src/
-│   ├── components/
-│   │   ├── Header.tsx
-│   │   ├── Sidebar.tsx
-│   │   ├── Dashboard.tsx
-│   │   └── ... (outros componentes)
-│   ├── App.tsx
-│   ├── constants.ts (ou .tsx)
-│   └── types.ts (ou .tsx)
-├── package.json
-└── vite.config.ts
