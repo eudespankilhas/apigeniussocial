@@ -5,5 +5,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js']
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   }
 })
