@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vite.config.ts",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
@@ -13,10 +13,6 @@
       "dest": "/index.html"
     }
   ],
-  "cache": {
-    "include": ["node_modules/.vite", "dist"],
-    "exclude": ["**/*.map"]
-  },
   "env": {
     "NODE_ENV": "production"
   }
